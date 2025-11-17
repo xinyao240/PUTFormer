@@ -120,11 +120,6 @@ class PUTFormer(nn.Module):
             nn.ModuleList([FactorizedTBlock(base_ch * 4, head=ltb_head[1], size1=4, size2=8) for i in range(ltb_num[1])]),
             nn.ModuleList([FactorizedTBlock(base_ch * 2, head=ltb_head[2], size1=4, size2=8) for i in range(ltb_num[2])]),
             nn.ModuleList([FactorizedTBlock(base_ch, head=ltb_head[3], size1=4, size2=8) for i in range(ltb_num[3])]),
-
-            # nn.ModuleList([nn.Identity() for i in range(ltb_num[0])]),
-            # nn.ModuleList([nn.Identity() for i in range(ltb_num[1])]),
-            # nn.ModuleList([nn.Identity() for i in range(ltb_num[2])]),
-            # nn.ModuleList([nn.Identity() for i in range(ltb_num[3])]),
         ])
 
         self.out_convs=nn.ModuleList([
@@ -139,11 +134,6 @@ class PUTFormer(nn.Module):
             CrossScaleModulator(base_ch * 8, base_ch * 4),
             CrossScaleModulator(base_ch * 4, base_ch * 2),
             CrossScaleModulator(base_ch * 2, base_ch * 1),
-
-            # ConcatConv(base_ch * 16, base_ch * 8),
-            # ConcatConv(base_ch * 8, base_ch * 4),
-            # ConcatConv(base_ch * 4, base_ch * 2),
-            # ConcatConv(base_ch * 2, base_ch * 1),
         ])
 
     def multiscale_embed(self, x):
