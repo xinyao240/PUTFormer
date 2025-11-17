@@ -13,3 +13,14 @@ The data should be preprocessed to h5py files as in [SQDLSTM](https://github.com
 
 ## Note
 The LTBs implementation is upgraded to factorized attention inspired by [SERT](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_Spectral_Enhanced_Rectangle_Transformer_for_Hyperspectral_Image_Denoising_CVPR_2023_paper.pdf). Instead of concatenation, we use sequential stacking.
+
+## Citation
+@article{quan2025phase,
+  title={Phase unwrapping via fully exploiting global and local spatial dependencies},
+  author={Quan, Yuhui and Yao, Xin and Chen, Zhifeng and Ji, Hui},
+  journal={Optics \& Laser Technology},
+  volume={181},
+  pages={111872},
+  year={2025},
+  publisher={Elsevier}
+}
