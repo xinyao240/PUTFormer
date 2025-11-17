@@ -7,6 +7,8 @@ torch>=1.10
 ## Data
 Synthetic Data: Follows [SQDLSTM](https://github.com/Laknath1996/DeepPhaseUnwrap). For synthetic data, it is better to generate it on your own and retrain all baselines for fair comparison.
 
+InSAR Data: Collect raw InSAR Elevation Map from Internet (e.g., [InSAR](https://catalog.data.gov/dataset/?tags=insar)) and then use the same pipeline in [SQDLSTM](https://github.com/Laknath1996/DeepPhaseUnwrap) for data preprocessing.
+
 FPP Data: Follows [HiPhase](https://github.com/WanzhongSong/HiPhase)
 
 The data should be preprocessed to h5py files as in [SQDLSTM](https://github.com/Laknath1996/DeepPhaseUnwrap).
